@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Assignment 4</title>
+    <style>
+        .one{
+            height: 100px;
+            width : 100px;
+            background-color : purple;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        img{
+            width : 300px;
+        }
+    </style>
+</head>
+<div class="one"></div>
+<button onclick="changeColor()">changeColor</button>
+<img class="img" src="img/img1.jpg" width="100px"/>
+<button onclick="changeImage()">changeImage</button>
+<!--<button onClick="changeImage()"changeImage</buttton-->
+    <br/>
+    <!--<img src="C:/desktop/BLOCKCHAIN/img/img1.jpeg"-->
+    <!--<img src="C:/desktop/BLOCKCHAIN/img/img2.jpeg"-->
+    <!--<img src="C:/desktop/BLOCKCHAIN/img/img3.png"-->
+<body>
+    <script>
+        function changeColor()
+        {
+            document.querySelector('.one').style.backgroundColor="green";
+        }
+        function changeImage()
+        {
+            document.querySelector('.img').setAttribute("src","img/img2.jpg",)
+        }
+           let images=["img/img1.jpg","img/img2.jpg","img/img3.png"];
+           let currentImage=0;
+
+           function next(){
+            if(currentImage<2)
+            {
+                currentImage++;
+            }
+            document.querySelector(".img").setAttribute("src",images[currentImage]);
+        }
+    </script>
+    
+</body>
+</html>
